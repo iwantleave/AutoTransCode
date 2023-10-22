@@ -27,7 +27,7 @@ if __name__ == '__main__':
     print(second_filelist)
     print(first_filelist)
     wait_trans_code = list(set(first_filelist)-set(second_filelist))
-    print("待转码视频", wait_trans_code)
+    print("waiting for transcode", wait_trans_code)
 
     for i in wait_trans_code:
         run_ffmpeg(ffmpeg_path,"D:\\trans_code\\first\\"+i,"D:\\trans_code\\second\\"+i)
