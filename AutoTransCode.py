@@ -19,19 +19,7 @@ def run_ffmpeg(ffmpeg_path,input_file,output_file):
         print("success")
     else:
         print("error")
-    # try:
-    #     while True:
-    #         buff=result.stdout.readline()
-    #         if buff==b'' or buff==None:
-    #             break;
-    #         else:
-    #             print(buff)
-    # except:
-    #     print("error")
-    # return
 
-
-# 按间距中的绿色按钮以运行脚本。
 if __name__ == '__main__':
     ffmpeg_path = "D:\\jobs\\ffmpeg\\ffmpeg.exe"
     second_filelist = get_filelist('D:\\trans_code\\second')
