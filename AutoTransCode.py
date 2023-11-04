@@ -13,7 +13,6 @@ def run_ffmpeg(ffmpeg_path,input_file,output_file):
     result = subprocess.Popen(ffmpeg_cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,encoding='gbk',text=True)
     for line in result.stdout:
         print(line)
-        time.sleep(0.1)
     result.wait()
     if result.poll()==0:
         print("success")
@@ -27,6 +26,7 @@ if __name__ == '__main__':
     print(second_filelist)
     print(first_filelist)
     wait_trans_code = list(set(first_filelist)-set(second_filelist))
+    wait_trans_code.sort()
     print("waiting for transcode", wait_trans_code)
 
     for i in wait_trans_code:
